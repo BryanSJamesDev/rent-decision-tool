@@ -1,0 +1,7 @@
+id,address,zip,rent,beds,baths,sqft,type,listed,days_on_market_as_of_2026_11_12,price_cuts,include,note,url
+1,2023 S Garnet St,19145,2300,4,2,1128,Townhouse,2026-11-07,5,0,true,Renovated look. Prior run at 2400 in 2025 ended in 12 days. Listing ended is not confirmed lease.,zillow.com/homedetails/2023-S-Garnet-St-Philadelphia-PA-19145/10458869_zpid/
+2,2229 S Garnet St,19145,2200,3,1.5,1031,Single family,2026-08-03,101,1 (4.3% on 2026-11-02),true,Sold 2026-08-24 for 175000 then listed for rent. Likely new owner.,zillow.com/homedetails/2229-S-Garnet-St-Philadelphia-PA-19145/10306773_zpid/
+3,1527 S Bambrey St,19146,1950,3,2,1352,Townhouse,2026-09-02,71,1 (7.1% on 2026-10-12),true,Earlier run ended 2026-03-07. Lease not confirmed.,zillow.com/homedetails/1527-S-Bambrey-St-Philadelphia-PA-19146/10368625_zpid/
+4,2606 S 2nd St,19148,2500,3,2,1450,Townhouse,2026-11-10,2,0,true,Too new to say anything about time on market. No pets.,zillow.com/homedetails/2606-S-2nd-St-Philadelphia-PA-19148/10385613_zpid/
+5,5628 Kingsessing Ave,19143,1850,3,1,1120,Single family,2026-10-03,40,0,true,Different and lower-rent neighborhood. 1 bath. Sold 2026-06-29 for 141500. No pets.,zillow.com/homedetails/5628-Kingsessing-Ave-Philadelphia-PA-19143/10484668_zpid/
+6,2522 Alter St,19146,3497,3,3,2200,Single family,2026-11-04,8,1 (12.5% on 2026-11-06),false,Excluded: 46% larger than subject. Price includes required monthly fees. 6-month lease incentive of free utilities.,zillow.com/homedetails/2522-Alter-St-Philadelphia-PA-19146/118369185_zpid/

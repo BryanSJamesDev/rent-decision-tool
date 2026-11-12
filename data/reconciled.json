@@ -69,7 +69,7 @@
       "values": { "opa": "Kogan Pittsburgh LLC (Fairlawn NJ)" },
       "chosen": "Kogan Pittsburgh LLC",
       "confidence": "high",
-      "reason": "Zillow lists REMA as manager. The owner is an out-of-state LLC, so this is not a small mom-and-pop landlord. The tool assumes the user is one."
+      "reason": "Zillow lists REMA as manager. The owner is an out-of-state LLC, so this is not a small mom-and-pop landlord. The tool is written for a small landlord, as the assignment asks, so treat this owner's behavior as one example, not the rule."
     },
     "estimated_tax_2027": {
       "values": { "opa": 3630 },

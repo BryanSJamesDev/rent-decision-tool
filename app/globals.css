@@ -1,0 +1,235 @@
+:root {
+  --text: #1d1d1f;
+  --muted: #5f6368;
+  --bg: #ffffff;
+  --panel: #f5f6f8;
+  --line: #d9dce1;
+  --accent: #1f5fbf;
+  --conflict-bg: #fff4d6;
+  --conflict-line: #d99a00;
+  --excluded: #9aa0a6;
+  --gain: #1b7a3a;
+  --loss: #b3261e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 4px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 16px 0 4px;
+}
+
+section {
+  margin-top: 32px;
+}
+
+a {
+  color: var(--accent);
+}
+
+.small {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.box {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.decision {
+  border-left: 4px solid var(--accent);
+}
+
+.question {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.limits {
+  border-left: 4px solid var(--muted);
+}
+
+/* Tables scroll sideways on small screens instead of squashing. */
+.scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  background: var(--panel);
+  white-space: nowrap;
+}
+
+tr.conflict td {
+  background: var(--conflict-bg);
+}
+
+tr.conflict td:first-child {
+  border-left: 4px solid var(--conflict-line);
+}
+
+tr.group td {
+  font-weight: 600;
+  background: var(--panel);
+}
+
+tr.excluded td {
+  color: var(--excluded);
+}
+
+tr.excluded a {
+  color: var(--excluded);
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--conflict-line);
+  color: #fff;
+}
+
+ul.plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.src {
+  color: var(--muted);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.stats > div {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.calc {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.calc-field {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.calc-field span {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.calc-field select,
+.calc-field input[type="range"] {
+  width: 100%;
+  max-width: 420px;
+  font: inherit;
+}
+
+.calc-out {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.calc-out div {
+  background: var(--panel);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.calc-out dt {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.calc-out dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.net.gain dd {
+  color: var(--gain);
+}
+
+.net.loss dd {
+  color: var(--loss);
+}
+
+.note {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-left: 4px solid var(--line);
+  background: var(--panel);
+  font-size: 0.9rem;
+}
