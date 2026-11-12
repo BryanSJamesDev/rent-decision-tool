@@ -1,0 +1,121 @@
+{
+  "property": {
+    "address": "1620 S 22nd St, Philadelphia, PA 19145",
+    "opa_parcel": "364116600",
+    "retrieved": "2026-11-12"
+  },
+  "fields": {
+    "asking_rent": {
+      "values": { "zillow": 2015 },
+      "chosen": 2015,
+      "confidence": "high",
+      "reason": "Only the listing states asking rent. Zillow page last updated 2026-11-07."
+    },
+    "days_on_market": {
+      "values": { "zillow": 70 },
+      "chosen": 70,
+      "confidence": "medium",
+      "reason": "Zillow's count starts at the 9/2/2026 listing. Zillow also shows an earlier removal in 2021, so time on market may differ if the unit was relisted or delisted in between."
+    },
+    "bedrooms": {
+      "values": { "zillow": 4, "opa": 4 },
+      "chosen": 4,
+      "confidence": "high",
+      "reason": "Sources agree."
+    },
+    "bathrooms": {
+      "values": { "zillow": 2, "opa": 1 },
+      "chosen": 2,
+      "confidence": "low",
+      "conflict": true,
+      "reason": "Zillow reflects the current listing and may include a renovation, while OPA may be stale. Not verifiable without a permit record or inspection. Comps are filtered on 4 bd and not on baths so this does not drive the decision."
+    },
+    "square_feet": {
+      "values": { "zillow": 1504, "opa": 1596 },
+      "chosen": 1504,
+      "confidence": "medium",
+      "conflict": true,
+      "reason": "6% gap. OPA figure is the improvement area (may include basement or walls), listing figure is living area. Use the listing figure for rent per sq ft comparisons since comps are also listing-based."
+    },
+    "year_built": {
+      "values": { "opa": 1915 },
+      "chosen": 1915,
+      "confidence": "low",
+      "reason": "OPA marks this as estimated. Zillow does not list it. Row homes of this type are plausible for the era."
+    },
+    "last_sale": {
+      "values": {
+        "zillow": { "date": "2020-12-04", "price": 185000 },
+        "opa": { "date": "2020-11-13", "price": 185000 }
+      },
+      "chosen": { "date": "2020-11-13", "price": 185000 },
+      "confidence": "high",
+      "conflict": true,
+      "reason": "Price matches. Date differs by 3 weeks, likely recording date vs. deed date. Immaterial to the decision. OPA is the official record, so it wins."
+    },
+    "sale_2019": {
+      "values": { "opa": 415470 },
+      "chosen": null,
+      "confidence": "low",
+      "reason": "Roughly 2x the 2020 sale price. Likely a non-arms-length or bundled transfer. Excluded from any value reasoning."
+    },
+    "assessed_value_2027": {
+      "values": { "opa": 259300 },
+      "chosen": 259300,
+      "confidence": "high",
+      "reason": "Official figure. Jumped from 200,000, so it says nothing about rent."
+    },
+    "owner": {
+      "values": { "opa": "Kogan Pittsburgh LLC (Fairlawn NJ)" },
+      "chosen": "Kogan Pittsburgh LLC",
+      "confidence": "high",
+      "reason": "Zillow lists REMA as manager. The owner is an out-of-state LLC, so this is not a small mom-and-pop landlord. The tool assumes the user is one."
+    },
+    "estimated_tax_2027": {
+      "values": { "opa": 3630 },
+      "chosen": 3630,
+      "confidence": "medium",
+      "reason": "OPA estimate. No homestead exemption on file."
+    },
+    "condition": {
+      "values": { "opa": "average" },
+      "chosen": "average",
+      "confidence": "low",
+      "reason": "Assessor category, not an inspection."
+    },
+    "section_8": {
+      "values": { "zillow": "accepted (3 and 4 BR vouchers)" },
+      "chosen": "accepted",
+      "confidence": "medium",
+      "reason": "Stated in listing. Unit must still pass inspection."
+    }
+  },
+  "external": {
+    "pha_payment_standard_4br": {
+      "source": "PHA Payment Standard Schedule, effective 2025-11-01, p.1",
+      "retrieved": "2026-11-12",
+      "zip_group_for_19145": "Group 4 (Opportunity Rents), confirmed in PDF",
+      "standard_4br": 3120,
+      "standard_3br": 2790,
+      "note": "Maximum subsidy standard by voucher size, not an approved rent. PHA also runs its own market analysis and a rent reasonableness check, and the tenant's share is capped at 40% of adjusted income. Asking rent of 2015 is about 35% below the 4BR standard, so the voucher cap is not the binding constraint. Voucher payment limits are unlikely to be what is holding this unit vacant, but inspection delays and rent reasonableness review cannot be ruled out from this data."
+    },
+    "hud_fmr_4br": {
+      "values": { "source_a": 2423, "source_b": 2120 },
+      "chosen": null,
+      "confidence": "low",
+      "conflict": true,
+      "reason": "Aggregators disagree, likely different fiscal year or area definition. Confirm at huduser.gov before citing. Not used in the calculation."
+    },
+    "census_median_gross_rent_philadelphia_county": {
+      "values": { "census_quickfacts_2020_2024": 1397 },
+      "note": "All unit sizes, county-wide. Not comparable to a 4 bd house. Context only."
+    }
+  },
+  "not_obtainable": [
+    "Tenant demand or showing/inquiry counts for this unit",
+    "Actual leased rents (comps are asking rents only)",
+    "Interior condition, renovations, and permit history",
+    "Landlord's carrying costs, mortgage, and target return",
+    "Tract-level 4BR rent (Census API requires a key; tract median covers all sizes)"
+  ]
+}
