@@ -28,7 +28,7 @@
       "chosen": 2,
       "confidence": "low",
       "conflict": true,
-      "reason": "Zillow reflects the current listing and may include a renovation, while OPA may be stale. Not verifiable without a permit record or inspection. Comps are filtered on 4 bd and not on baths so this does not drive the decision."
+      "reason": "Zillow reflects the current listing and may include a renovation, while OPA may be stale. Not verifiable without a permit record or inspection. Comps are matched on 3 to 4 bedrooms and not on baths, so this does not drive the decision."
     },
     "square_feet": {
       "values": { "zillow": 1504, "opa": 1596 },
